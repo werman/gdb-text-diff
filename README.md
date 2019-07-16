@@ -17,11 +17,11 @@ A simple `diff` command for gdb which allows to see changes in complex structure
 
 ### Intent
 
-While it's easy to observe the changes of integers, strings or even small structures it may be hard to reason about changes in DOM or AST when you are stepping through code trying to find what gone wrong.
+While it's easy to observe the changes of integers, strings or even small structures it may be hard to reason about changes in DOM or AST when you are stepping through code trying to find out what exactly gone wrong.
 
-Yes one can add logging of the structures throughout the code for debugging but when the exact place of issue is unknown it is soon become tiresome to do.
+Yes you can add logging of your complex structure throughout the code but when the exact place of interest is unknown it is soon become tiresome to do.
 
-On the other hand you can automate gdb to save it when on change and have two files to run some diff program on. Which this python script aims to do.
+On the other hand you can automate gdb to save the complex structure when it changed and have two files to run some diff program on. Which this python script aims to do.
 
 ### Usage
 
@@ -70,3 +70,6 @@ int main(int argc, char **argv)
 
 You just need to open the two files in your favourite diff application and if it doesn't automatically refresh diff on file change (most don't) manually refresh the view when necessary.
 
+### TODO
+
+- [ ] Go back in expression history
